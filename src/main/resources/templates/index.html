@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Trabajo Practico N°4</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+</head>
+
+<body>
+	<div class="container">
+		
+		<header class="bg-light p-3 text-center">
+	        <img src="https://pbs.twimg.com/profile_images/696711688452710400/RLCdz9I1_400x400.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top rounded-circle">
+	        <h1>Universidad Nacional de Jujuy</h1>
+	        <p>Más educación es más democracia</p>
+	        
+	        <div data-th-replace="~{fragments/fragmentos::navbar}"></div>
+    	</header>
+		
+		<div class="body">
+		    <div class="container mt-4">
+		        <div class="row">
+		            <!-- Barra Lateral -->
+		            <aside class="col-md-3">
+		                <h2>Enlaces</h2>
+		                <ul class="list-group">
+		                    <li class="list-group-item"><a href="#">Biblioteca</a></li>
+		                    <li class="list-group-item"><a href="#">Calendario académico</a></li>
+		                    <li class="list-group-item"><a href="#">Facultad de Ciencias Agrarias</a></li>
+		                    <li class="list-group-item"><a href="#">Facultad de Ciencias Economicas</a></li>
+		                    <li class="list-group-item"><a href="#">Facultad de Ingenieria</a></li>
+		                    <li class="list-group-item"><a href="#">Escuela de Minas</a></li>
+		                </ul>
+		            </aside>
+		
+		            <!-- Contenido Principal -->
+		            <main class="col-md-9">
+		                <section>
+		                    <h2>Acerca de la Facultad</h2>
+		                    <p>La Universidad Nacional de Jujuy es una universidad pública argentina ubicada en San Salvador de Jujuy, provincia de Jujuy. Fundada en 1973, cuenta con cuatro facultades y cinco institutos, donde cursan sus carreras alrededor de 25 000 estudiantes. Hay 40 mil usuarios de alumnos en UNJu Virtual.</p>
+		                </section>
+		                <section>
+		                    <h2>Noticias Recientes</h2>
+		                    <div data-th-replace="~{fragments/fragmentos::noticia1}"></div>
+		                    <br>
+		                    <div data-th-replace="~{fragments/fragmentos::noticia2}"></div>
+		                    <br>
+		                </section>
+		            </main>
+		        </div>
+		    </div>
+		</div>
+		
+
+		
+		<footer>
+			<div data-th-replace="~{fragments/fragmentos::footer}"></div>
+			<br>
+		</footer>
+		
+	</div>
+
+
+	
+
+    <script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>
