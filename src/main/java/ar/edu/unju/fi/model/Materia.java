@@ -11,6 +11,10 @@ public class Materia {
 	private Docente docente;
 	private Carrera carrera;
 	
+	public Materia() {
+		super();
+	}
+
 	public Materia(String codigo, String nombre, String curso, byte cantHoras, Modalidad modalidad, Docente docente,
 			Carrera carrera) {
 		super();

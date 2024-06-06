@@ -12,6 +12,10 @@ public class Alumno {
 	private String domicilio;
 	private String LU;
 	
+	public Alumno() {
+		super();
+	}
+
 	public Alumno(String dni, String nombre, String apellido, String email, String telefono, LocalDate fechaDeNac,
 			String domicilio, String lU) {
 		super();
