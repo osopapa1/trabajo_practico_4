@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+
+<title>Listado Carrera</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">Codigo</th>
+		      <th scope="col">Nombre</th>
+		      <th scope="col">Cantidad de años</th>
+		      <th scope="col">Estado</th>
+		    </tr>
+		  </thead>
+		  
+		  <tbody>
+		    <tr data-th-each="carrera : ${listadoCarreras}">
+		      <td data-th-text="${carrera.codigo}"></td>
+		      <td data-th-text="${carrera.nombre}"></td>
+		      <td data-th-text="${carrera.cantDeAños}"></td>
+		      <td data-th-text="${carrera.estado}"></td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
+	</div>
+
+
+<script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

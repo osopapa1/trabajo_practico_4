@@ -4,9 +4,16 @@ public class Carrera {
 	private String codigo;
 	private String nombre;
 	private byte cantDeAños;
-	private String estado;
+	private Boolean estado;
 	
-	public Carrera(String codigo, String nombre, byte cantDeAños, String estado) {
+	
+	
+	public Carrera() {
+		super();
+	}
+
+
+	public Carrera(String codigo, String nombre, byte cantDeAños, Boolean estado) {
 		super();
 		this.codigo = codigo;
 		this.nombre = nombre;
@@ -45,12 +52,12 @@ public class Carrera {
 	}
 
 
-	public String getEstado() {
+	public Boolean getEstado() {
 		return estado;
 	}
 
 
-	public void setEstado(String estado) {
+	public void setEstado(Boolean estado) {
 		this.estado = estado;
 	}
 	
