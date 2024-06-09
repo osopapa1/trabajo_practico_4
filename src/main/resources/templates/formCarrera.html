@@ -9,12 +9,17 @@
 </head>
 <body>
 	<div class="container">
-		<form data-th-object="${nuevaCarrera}"
-		data-th-action="@{/guardarCarrera}"
-		method="post">
+		<header class="bg-light p-3 text-center">
+	        <div data-th-replace="~{fragments/header::cabecera}"></div>
+
+			<div data-th-replace="~{fragments/header::navbar}"></div>
+    	</header>
+	
+		<form data-th-object="${nuevaCarrera}" data-th-action="${flag}?@{/modificarCarrera}:@{/guardarCarrera}" method="post">
+		
 			<div class="col-md-4">
 				<label for="codigo" class="form-label">Codigo</label> 
-				<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}">
+				<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${flag}">
 				<div id="codigo" class="form-text">Ingrese el codigo de la carrera, por favor.</div>
 			</div>
 			
@@ -35,6 +40,12 @@
 			<button type="submit" class="btn btn-primary">Guardar datos</button>
 		</form>
 	</div>
+	
+	<footer>
+			<br>
+			<div data-th-replace="~{fragments/footer::footer}"></div>
+			<br>
+	</footer>
 
 
 	<script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>

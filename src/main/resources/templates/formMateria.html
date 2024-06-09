@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+
+<title>Formulario Materia</title>
+</head>
+<body>
+	<div class="container">
+		<header class="bg-light p-3 text-center">
+		        <div data-th-replace="~{fragments/header::cabecera}"></div>
+	
+				<div data-th-replace="~{fragments/header::navbar}"></div>
+	    </header>
+		
+		        <form data-th-object="${nuevaMateria}" data-th-action="${flag}?@{/modificarMateria}:@{/guardarMateria}" method="post">
+
+		
+			<div class="col-md-4">
+				<label for="codigo" class="form-label">Codigo</label> 
+				<input type="text" class="form-control" id="codigo" data-th-field="*{codigo}" data-th-readonly="${flag}">
+			</div>
+			
+			<div class="col-md-4">
+				<label for="nombre" class="form-label">Nombre</label> 
+				<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}">
+			</div>
+			
+			<div class="col-md-4">
+				<label for="curso" class="form-label">Curso</label> 
+				<input type="text" class="form-control" id="curso" data-th-field="*{curso}">
+			</div>
+			
+			<div class="col-md-4">
+				<label for="cantDeHoras" class="form-label">Cantidad de horas</label> 
+				<input type="number" class="form-control" id="cantDeHoras" data-th-field="*{cantHoras}">
+			</div>
+			
+			<div class="col-md-4">
+				<label for="modalidad" class="form-label">Modalidad</label>
+				<select id="modalidad" class="form-control text-black" data-th-field="*{modalidad}">
+					<option value="Virtual">virtual</option>
+					<option value="Presencial">presencial</option>
+				</select>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="docente" class="form-label">Docente</label>
+				<select id="docente" data-th-field="*{docente.legajo}" class="form-select text-black">
+					<option value="">Seleccionar Docente</option>
+					<option data-th-each="d:${listadoDocentes}" data-th-value="${d.legajo}" data-th-text="${d.apellido}"></option>
+				</select>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="carrera" class="form-label">Carrera</label>
+				<select id="carrera" data-th-field="*{carrera.codigo}" class="form-select text-black">
+					<option value="">Seleccionar Carrera</option>
+					<option data-th-each="c:${listadoCarreras}" data-th-value="${c.codigo}" data-th-text="${c.nombre}"></option>
+				</select>
+			</div>
+			<br>
+			
+			<button type="submit" class="btn btn-primary">Guardar datos</button>
+			<br>
+		</form>
+		<br>
+	</div>
+
+	<footer>
+		<br>
+		<div data-th-replace="~{fragments/footer::footer}"></div>
+		<br>
+	</footer>
+
+	<script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

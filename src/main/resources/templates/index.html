@@ -9,15 +9,15 @@
 </head>
 
 <body>
+	<header class="bg-light p-3 text-center">
+	        <div data-th-replace="~{fragments/header::cabecera}"></div>
+
+			<div data-th-replace="~{fragments/header::navbar}"></div>
+    </header>
+
 	<div class="container">
 		
-		<header class="bg-light p-3 text-center">
-	        <img src="https://pbs.twimg.com/profile_images/696711688452710400/RLCdz9I1_400x400.jpg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top rounded-circle">
-	        <h1>Universidad Nacional de Jujuy</h1>
-	        <p>Más educación es más democracia</p>
-	        
-	        <div data-th-replace="~{fragments/fragmentos::navbar}"></div>
-    	</header>
+		
 		
 		<div class="body">
 		    <div class="container mt-4">
@@ -29,6 +29,7 @@
 		                    <li class="list-group-item"><a href="#">Biblioteca</a></li>
 		                    <li class="list-group-item"><a href="#">Calendario académico</a></li>
 		                    <li class="list-group-item"><a href="#">Facultad de Ciencias Agrarias</a></li>
+		                    <li class="list-group-item"><a href="#">Facultad de humanidades</a></li>
 		                    <li class="list-group-item"><a href="#">Facultad de Ciencias Economicas</a></li>
 		                    <li class="list-group-item"><a href="#">Facultad de Ingenieria</a></li>
 		                    <li class="list-group-item"><a href="#">Escuela de Minas</a></li>
@@ -37,11 +38,102 @@
 		
 		            <!-- Contenido Principal -->
 		            <main class="col-md-9">
-		                <section>
+		                <section id="acercaDe">
 		                    <h2>Acerca de la Facultad</h2>
 		                    <p>La Universidad Nacional de Jujuy es una universidad pública argentina ubicada en San Salvador de Jujuy, provincia de Jujuy. Fundada en 1973, cuenta con cuatro facultades y cinco institutos, donde cursan sus carreras alrededor de 25 000 estudiantes. Hay 40 mil usuarios de alumnos en UNJu Virtual.</p>
+		               
 		                </section>
+		                
+		                <br>
+		                
+		                <section id="carreras">
+			                <h2>Facultades y carreras</h2>
+			                    
+								<ol class="list-group list-group-numbered">
+								  <li class="list-group-item d-flex justify-content-between align-items-start">
+								    <div class="ms-2 me-auto">
+								      <div class="fw-bold">Facultad de Ciencias Agrarias</div>
+								      Ofrece carreras relacionadas con la agronomía y ciencias agropecuarias.
+								    </div>
+								  </li>
+								  <li class="list-group-item d-flex justify-content-between align-items-start">
+								    <div class="ms-2 me-auto">
+								      <div class="fw-bold">Facultad de humanidades y ciencias sociales</div>
+								      Ofrece carreras en áreas como psicología, comunicación social, trabajo social, entre otras.
+								    </div>
+								  </li>
+								  <li class="list-group-item d-flex justify-content-between align-items-start">
+								    <div class="ms-2 me-auto">
+								      <div class="fw-bold">Facultad de ingenieria</div>
+								      Ofrece diversas ingenierías, incluyendo ingeniería en informática, industrial y civil.
+								    </div>
+								  </li>
+								    <li class="list-group-item d-flex justify-content-between align-items-start">
+								    <div class="ms-2 me-auto">
+								      <div class="fw-bold">Facultad de ciencias economicas</div>
+								      Ofrece carreras en economía, administración de empresas y contabilidad.
+								    </div>
+								  </li>
+								</ol>
+							<br>
+		                </section>
+		                		           	                
+		                <br>
 		                <section>
+		                	<h2>Otras funcionalidades</h2>
+		                		
+							<div class="row row-cols-1 row-cols-md-2 g-4">
+							  <div class="col">
+							    <div class="card">
+							      <img src="img/carrera.jpg" class="card-img-top" alt="carreras">
+							      <div class="card-body">
+							        <h5 class="card-title">Carreras</h5>
+							        <p class="card-text">Aqui puede consultar informacion de las carreras.</p>
+							        <a href="/carreras"><button class="btn btn-success" type="button">Ver listado de carreras</button></a>
+							        <a href="/formularioCarrera"><button class="btn btn-success" type="button">Formulario de carreras</button></a>
+							      </div>
+							    </div>
+							  </div>
+							  
+							   <div class="col">
+							    <div class="card">
+							      <img src="img/alumnos.jpg" class="card-img-top" alt="...">
+							      <div class="card-body">
+							        <h5 class="card-title">Alumnos</h5>
+							        <p class="card-text">Aqui puede consultar informacion de los alumnos.</p>
+							        <a href="/alumnos"><button class="btn btn-success" type="button">Ver listado de alumnos</button></a>
+							        <a href="/formularioAlumno"><button class="btn btn-success" type="button">Formulario de alumnos</button></a>
+							      </div>
+							    </div>
+							  </div>
+							  
+							  <div class="col">
+							    <div class="card">
+							      <img src="img/docentes-img.jpeg" class="card-img-top" alt="docentes">
+							      <div class="card-body">
+							        <h5 class="card-title">Docentes</h5>
+							        <p class="card-text">Aqui puede consultar informacion de los docentes.</p>
+							        <a href="/docentes"><button class="btn btn-success" type="button">Ver listado de docentes</button></a>
+							        <a href="/formularioDocente"><button class="btn btn-success" type="button">Formulario de docentes</button></a>
+							      </div>
+							    </div>
+							  </div>
+							
+							  <div class="col">
+							    <div class="card">
+							      <img src="img/materias.jpg" class="card-img-top" alt="...">
+							      <div class="card-body">
+							        <h5 class="card-title">Materias</h5>
+							        <p class="card-text">Aqui puede consutar informacion de las materias</p>
+							        <a href="/materias"><button class="btn btn-success" type="button">Ver listado de materias</button></a>
+							        <a href="/formularioMateria"><button class="btn btn-success" type="button">Formulario de materias</button></a>
+							      </div>
+							    </div>
+							  </div>
+							</div>	       
+	          
+		                </section>
+		                <section id="noticias">
 		                    <h2>Noticias Recientes</h2>
 		                    <div data-th-replace="~{fragments/fragmentos::noticia1}"></div>
 		                    <br>
@@ -56,14 +148,12 @@
 
 		
 		<footer>
-			<div data-th-replace="~{fragments/fragmentos::footer}"></div>
+			<div data-th-replace="~{fragments/footer::footer}"></div>
 			<br>
 		</footer>
 		
 	</div>
 
-
-	
 
     <script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
 </body>
