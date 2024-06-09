@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+
+<title>Formulario Docente</title>
+</head>
+<body>
+	<div class="container">
+		<header class="bg-light p-3 text-center">
+		        <div data-th-replace="~{fragments/header::cabecera}"></div>
+	
+				<div data-th-replace="~{fragments/header::navbar}"></div>
+	    </header>
+	
+			<form data-th-object="${nuevoDocente}" data-th-action="${flag}?@{/modificarDocente}:@{/guardarDocente}" method="post">
+
+		
+			<div class="col-md-4">
+				<label for="legajo" class="form-label">Legajo</label> 
+				<input type="text" class="form-control" id="codigo" data-th-field="*{legajo}" data-th-readonly="${flag}">
+				<div id="legajo" class="form-text">Ingrese el legajo del docente, por favor.</div>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="nombre" class="form-label">Nombre</label> 
+				<input type="text" class="form-control" id="nombre" data-th-field="*{nombre}">
+				<div id="nombre" class="form-text">Ingrese el nombre del docente, por favor.</div>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="apellido" class="form-label">Apellido</label> 
+				<input type="text" class="form-control" id="apellido" data-th-field="*{apellido}">
+				<div id="apellido" class="form-text">Ingrese el apellido del docente, por favor.</div>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="email" class="form-label">Email</label> 
+				<input type="email" class="form-control" id="email" data-th-field="*{email}">
+				<div id="email" class="form-text">Ingrese el email del docente, por favor.</div>
+			</div>
+			
+			<div class="col-md-4">
+				<label for="telefono" class="form-label">Telefono</label> 
+				<input type="number" class="form-control" id="telefono" data-th-field="*{telefono}">
+				<div id="telefono" class="form-text">Ingrese el telefono del docente, por favor.</div>
+			</div>
+		<br>
+			
+			<button type="submit" class="btn btn-primary">Guardar datos</button>
+		</form>
+	</div>
+
+	<footer>
+		<br>
+		<div data-th-replace="~{fragments/footer::footer}"></div>
+		<br>
+	</footer>
+
+	<script src="@{/webjars/bootstrap/5.3.3/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>l>

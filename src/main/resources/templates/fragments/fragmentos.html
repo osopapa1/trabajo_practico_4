@@ -5,185 +5,77 @@
 <title>Insert title here</title>
 </head>
 <body>
-		
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-th-fragment="navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">UNJU</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Acerca de</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Carreras</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Noticias</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contacto</a>
-        </li>
-               
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-    </div>
-  </div>
-</nav>
+
+	<div class="card" data-th-fragment="noticia1">
+	  <div class="card-body">
+	    <h5 class="card-title">HASTA EL 15 DE JUNIO PERMANECERÁN ABIERTAS LAS INSCRIPCIONES PARA EL SEMINARIO "LA INVESTIGACIÓN OPERATIVA APLICADA EN LA EMPRESA FAMILIAR RURAL”</h5>
+	    <p class="card-text">Destinado a profesionales de las Ciencias Agrarias, Lic. en Administración de Empresas y otras Ingenierías afines a la producción agropecuaria y/o alimentos que se encuentren trabajando insertos en el campo jujeño.</p>
+	    <a href="https://noticias.unju.edu.ar/noticia.php?id=4387" class="btn btn-primary">Leer la noticia</a>
+	  </div>
+	</div>
+	
+	<div class="card" data-th-fragment="noticia2">
+	  <div class="card-body">
+	    <h5 class="card-title">78°ANIVERSARIO DEL MUSEO DE CIENCIAS NATURALES DR. SATURNINO IGLESIAS DE LA UNJU</h5>
+	    <p class="card-text">En la oportunidad, este museo de Geología, Mineralogía y Paleontología, presentó un nuevo espacio de integración con exhibiciones interactivas, maquetas detalladas y producciones audiovisuales, y, en conjunto con UNJu PRODIS un montaje accesible para personas ciegas con descripciones en Braile.</p>
+	    <a href="https://noticias.unju.edu.ar/noticia.php?id=4385" class="btn btn-primary">Leer la noticia</a>
+	  </div>
+	</div>
 
 
 
-
-
-  
-<div class="card" data-th-fragment="noticia1">
-  <div class="card-body">
-    <h5 class="card-title">HASTA EL 15 DE JUNIO PERMANECERÁN ABIERTAS LAS INSCRIPCIONES PARA EL SEMINARIO "LA INVESTIGACIÓN OPERATIVA APLICADA EN LA EMPRESA FAMILIAR RURAL”</h5>
-    <p class="card-text">Destinado a profesionales de las Ciencias Agrarias, Lic. en Administración de Empresas y otras Ingenierías afines a la producción agropecuaria y/o alimentos que se encuentren trabajando insertos en el campo jujeño.</p>
-    <a href="https://noticias.unju.edu.ar/noticia.php?id=4387" class="btn btn-primary">Leer la noticia</a>
-  </div>
-</div>
-
-<div class="card" data-th-fragment="noticia2">
-  <div class="card-body">
-    <h5 class="card-title">78°ANIVERSARIO DEL MUSEO DE CIENCIAS NATURALES DR. SATURNINO IGLESIAS DE LA UNJU</h5>
-    <p class="card-text">En la oportunidad, este museo de Geología, Mineralogía y Paleontología, presentó un nuevo espacio de integración con exhibiciones interactivas, maquetas detalladas y producciones audiovisuales, y, en conjunto con UNJu PRODIS un montaje accesible para personas ciegas con descripciones en Braile.</p>
-    <a href="https://noticias.unju.edu.ar/noticia.php?id=4385" class="btn btn-primary">Leer la noticia</a>
-  </div>
-</div>
-
-
-
-<!-- <div class="row" data-th-fragment="barra">
-  <div class="col-4">
-    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
-      <nav class="nav nav-pills flex-column">
-        <a class="nav-link" href="#item-1">Item 1</a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
-        </nav>
-        <a class="nav-link" href="#item-2">Item 2</a>
-        <a class="nav-link" href="#item-3">Item 3</a>
-        <nav class="nav nav-pills flex-column">
-          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
-        </nav>
-      </nav>
-    </nav>
-  </div>
-
-  <div class="col-8">
-    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-      <div id="item-1">
-        <h4>Item 1</h4>
-        <p>...</p>
-      </div>
-      <div id="item-1-1">
-        <h5>Item 1-1</h5>
-        <p>...</p>
-      </div>
-      <div id="item-1-2">
-        <h5>Item 1-2</h5>
-        <p>...</p>
-      </div>
-      <div id="item-2">
-        <h4>Item 2</h4>
-        <p>...</p>
-      </div>
-      <div id="item-3">
-        <h4>Item 3</h4>
-        <p>...</p>
-      </div>
-      <div id="item-3-1">
-        <h5>Item 3-1</h5>
-        <p>...</p>
-      </div>
-      <div id="item-3-2">
-        <h5>Item 3-2</h5>
-        <p>...</p>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-<!-- <div data-th-fragment="footer">
-	<footer>
-	  <div class="container">
-	    <div class="row">
-	      <div class="col-lg-4">
-	        <h3>Enlaces</h3>
-	        <ul>
-	          <li><a href="https://virtual.unju.edu.ar/">Unju Virtual</a></li>
-	          <li><a href="https://www.unju.edu.ar/">Unju</a></li>
-	          <li><a href="https://noticias.unju.edu.ar/">Noticias</a></li>
-	        </ul>
+<!-- 	<div class="row" data-th-fragment="barra">
+	  <div class="col-4">
+	    <nav id="navbar-example3" class="h-100 flex-column align-items-stretch pe-4 border-end">
+	      <nav class="nav nav-pills flex-column">
+	        <a class="nav-link" href="#item-1">Item 1</a>
+	        <nav class="nav nav-pills flex-column">
+	          <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+	          <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+	        </nav>
+	        <a class="nav-link" href="#item-2">Item 2</a>
+	        <a class="nav-link" href="#item-3">Item 3</a>
+	        <nav class="nav nav-pills flex-column">
+	          <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+	          <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+	        </nav>
+	      </nav>
+	    </nav>
+	  </div>
+	
+	  <div class="col-8">
+	    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+	      <div id="item-1">
+	        <h4>Item 1</h4>
+	        <p>...</p>
 	      </div>
-	      <div class="col-lg-4">
-	        <h3>Contacto</h3>
-	        <p>Correo electrónico: virtual@unju.edu.ar</p>
-	        <p>Direccion: Avda. Bolivia N° 1685 B° Los Huaicos</p>
-	        <p>Teléfono: 123-456-7890</p>
+	      <div id="item-1-1">
+	        <h5>Item 1-1</h5>
+	        <p>...</p>
 	      </div>
-	      <div class="col-lg-4">
-	        <h3>Derechos de autor</h3>
-	        <p>(c) 2024. Todos los derechos reservados.</p>
+	      <div id="item-1-2">
+	        <h5>Item 1-2</h5>
+	        <p>...</p>
+	      </div>
+	      <div id="item-2">
+	        <h4>Item 2</h4>
+	        <p>...</p>
+	      </div>
+	      <div id="item-3">
+	        <h4>Item 3</h4>
+	        <p>...</p>
+	      </div>
+	      <div id="item-3-1">
+	        <h5>Item 3-1</h5>
+	        <p>...</p>
+	      </div>
+	      <div id="item-3-2">
+	        <h5>Item 3-2</h5>
+	        <p>...</p>
 	      </div>
 	    </div>
 	  </div>
-	</footer>
-</div> -->
+	</div> -->
 
-
-<div class="card" data-th-fragment="footer">
-  <div class="card-header">
-    Pie de pagina
-  </div>
-  
-  <div class="card-body">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h5>Dirección</h5>
-                <p>Avda. Bolivia N° 1685 B° Los Huaicos</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Contacto</h5>
-                <p>Teléfono: +54 123 456 789</p>
-                <p>Correo Electrónico: <a href="mailto:virtual@unju.edu.ar">virtual@unju.edu.ar</a></p>
-            </div>
-            <div class="col-md-4">
-                <h5>Enlaces</h5>
-                <p>
-                    <a href="https://virtual.unju.edu.ar">Unju Virtual</a> |
-                    <a href="https://www.unju.edu.ar">Unju</a> |
-                    <a href="https://noticias.unju.edu.ar">Noticias Unju</a>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <p>(c) 2024 Universidad Nacional de Jujuy. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div>
-  </div>
-</div>
-
- 
 </body>
 </html>

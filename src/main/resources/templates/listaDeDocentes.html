@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" data-th-href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
 
-<title>Listado Carrera</title>
+<title>Listado Docentes</title>
 </head>
 
 <body>
@@ -18,28 +18,30 @@
 	
 				<div data-th-replace="~{fragments/header::navbar}"></div>
 	    </header>
-		    
+	    
 	
 		<table class="table">
 		  <thead>
 		    <tr>
-		      <th scope="col">Codigo</th>
+		      <th scope="col">Legajo</th>
 		      <th scope="col">Nombre</th>
-		      <th scope="col">Cantidad de años</th>
-		      <th scope="col">Estado</th>
+		      <th scope="col">Apellido</th>
+		      <th scope="col">Email</th>
+		      <th scope="col">Telefono</th>
 		      <th scope="col">Edicion</th>
 		    </tr>
 		  </thead>
 		  
 		  <tbody>
-		    <tr data-th-each="carrera : ${listadoCarreras}">
-		      <td data-th-text="${carrera.codigo}"></td>
-		      <td data-th-text="${carrera.nombre}"></td>
-		      <td data-th-text="${carrera.cantDeAños}"></td>
-		      <td data-th-text="${carrera.estado}"></td>
+		    <tr data-th-each="docente : ${listadoDocentes}">
+		      <td data-th-text="${docente.legajo}"></td>
+		      <td data-th-text="${docente.nombre}"></td>
+		      <td data-th-text="${docente.apellido}"></td>
+		      <td data-th-text="${docente.email}"></td>
+		      <td data-th-text="${docente.telefono}"></td>
 		      <td>
-		      		<a data-th-href="@{'/borrarCarrera/'+${carrera.codigo}}" class="btn btn-danger">Borrar</a>
-		      		<a data-th-href="@{'/modificarCarrera/'+${carrera.codigo}}" class="btn btn-warning">Modificar</a>
+		      		<a data-th-href="@{'/borrarDocente/'+${docente.legajo}}" class="btn btn-danger">Borrar</a>
+		      		<a data-th-href="@{'/modificarDocente/'+${docente.legajo}}" class="btn btn-warning">Modificar</a>
 		      		
 		      </td>
 		    </tr>
@@ -47,11 +49,11 @@
 		  </tbody>
 		</table>		
 	</div>
-	
+
 	<div class="container">
-		<a data-th-href="@{/formularioCarrera}" class="btn btn-primary">Volver al formulario</a>
+		<a data-th-href="@{/formularioDocente}" class="btn btn-primary">Volver al formulario</a>
 	</div>
-	
+
 	<footer>
 		<br>
 		<div data-th-replace="~{fragments/footer::footer}"></div>
